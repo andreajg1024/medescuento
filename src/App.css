@@ -1,38 +1,87 @@
-.App {
+/* Estilos para páginas adicionales - Agregar a App.css o crear archivos separados */
+
+.page {
+  min-height: 80vh;
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.about-content,
+.services-content,
+.blog-content,
+.account-content,
+.store-content {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about-text p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  margin-bottom: 25px;
+  color: #555;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.service-item,
+.blog-card,
+.category-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.service-item:hover,
+.blog-card:hover,
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-item h3,
+.category-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.blog-grid,
+.store-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.account-options {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 40px;
+  flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.account-options .btn {
+  padding: 15px 30px;
+  font-size: 1.1em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 768px) {
+  .account-options {
+    flex-direction: column;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .account-options .btn {
+    width: 200px;
   }
 }

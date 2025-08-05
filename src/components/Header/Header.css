@@ -1,0 +1,385 @@
+/* Header.css */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Top Header with Contact Info */
+.top-header {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+  padding: 8px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.top-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-image {
+  width: 180px;
+  height: 70px;
+  border-radius: 8px;
+  object-fit: contain;
+  background: none;
+  padding: 0;
+}
+
+/* Contact Sections - Individual */
+.contact-email-section {
+  display: flex;
+  align-items: center;
+  /* Posición personalizable para email */
+}
+
+.contact-schedule-section {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  /* Posición personalizable para horario */
+}
+
+.contact-phone-section {
+  display: flex;
+  align-items: center;
+  /* Posición personalizable para teléfono */
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.email-icon {
+  background: #4285f4;
+}
+
+.schedule-icon {
+  background: #4285f4;
+}
+
+.phone-icon {
+  background:#4285f4;
+}
+
+.contact-text {
+  display: flex;
+  flex-direction: row;
+  margin-inline-start: 50px;
+  gap: 1px;
+  min-width: 0;
+}
+
+.contact-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.contact-value {
+  font-size: 12px;
+  color: #333;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.contact-hours {
+  font-size: 10px;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 8px;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+.facebook { 
+  background: #3b5998; 
+}
+
+.instagram { 
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); 
+}
+
+/* Navigation Bar */
+.navigation-bar {
+  background: linear-gradient(135deg, #ffffff 0%, #7dc981 100%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav {
+  padding: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 15px 25px;
+  display: block;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.nav-list li:last-child .nav-link {
+  border-right: none;
+}
+
+.nav-link:hover {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  transform: none;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .contact-email-section,
+  .contact-schedule-section,
+  .contact-phone-section {
+    gap: 12px;
+  }
+  
+  .contact-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .contact-label {
+    font-size: 10px;
+  }
+  
+  .contact-value {
+    font-size: 11px;
+  }
+  
+  .contact-hours {
+    font-size: 9px;
+  }
+  
+  .logo-image {
+    width: 160px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .contact-email-section,
+  .contact-schedule-section,
+  .contact-phone-section {
+    gap: 8px;
+  }
+  
+  .contact-schedule-section {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .contact-item {
+    min-width: 0;
+  }
+  
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-label {
+    font-size: 8px;
+  }
+  
+  .contact-value {
+    font-size: 9px;
+  }
+  
+  .contact-hours {
+    font-size: 7px;
+  }
+  
+  .logo-image {
+    width: 140px;
+    height: 55px;
+  }
+  
+  .social-link {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .nav {
+    display: none;
+    width: 100%;
+  }
+  
+  .nav-open {
+    display: block;
+  }
+  
+  .nav-list {
+    flex-direction: column;
+    background: #4CAF50;
+    margin: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  }
+  
+  .nav-link {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nav-list li:last-child .nav-link {
+    border-bottom: none;
+  }
+  
+  .social-links {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-header-content {
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: 40px;
+  }
+  
+  .contact-email-section,
+  .contact-schedule-section,
+  .contact-phone-section {
+    gap: 5px;
+  }
+  
+  .contact-schedule-section {
+    flex: 1;
+    justify-content: center;
+  }
+  
+  .contact-item {
+    min-width: 0;
+  }
+  
+  .contact-icon {
+    width: 25px;
+    height: 25px;
+  }
+  
+  .contact-label {
+    font-size: 7px;
+  }
+  
+  .contact-value {
+    font-size: 8px;
+  }
+  
+  .contact-hours {
+    font-size: 6px;
+  }
+  
+  .social-link {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .nav-link {
+    padding: 12px 20px;
+    font-size: 13px;
+  }
+}
