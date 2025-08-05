@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/medescuento/static/css/main.a01b0eec.css",
+    "main.js": "/medescuento/static/js/main.b04e8d3a.js",
+    "index.html": "/medescuento/index.html",
+    "main.a01b0eec.css.map": "/medescuento/static/css/main.a01b0eec.css.map",
+    "main.b04e8d3a.js.map": "/medescuento/static/js/main.b04e8d3a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a01b0eec.css",
+    "static/js/main.b04e8d3a.js"
+  ]
+}
